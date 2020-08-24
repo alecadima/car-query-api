@@ -39,12 +39,12 @@ select * from ${table}
 
 ## Running Spring Boot App with local profile
 
-1.
+1. Running Spring Boot App with Maven plugin
 ```
 mvn spring-boot:run -Dspring-boot.run.profiles=local
 ```
 
-2.
+2. Running Spring Boot App with java -jar
 ```
 java -jar -Dspring.profiles.active=local car-query-api.jar 
 ```
