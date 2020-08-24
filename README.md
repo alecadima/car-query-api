@@ -34,7 +34,8 @@ describe tables;
 
 7. Selecting data from table
 ```
-select * from ${table}
+INSERT INTO tanzu.car (id, nm_assembler, nm_model, nr_manufacturing_year, nr_model_year) VALUES (6ab09bec-e68e-48d9-a5f8-97e6fb4c9b47, 'Ford','Foucs', 2020, 2020);
+SELECT * FROM ${table}
 ```
 
 ## Running Spring Boot App with local profile
