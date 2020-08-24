@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: car-query-api
+---
+spring:
+  profiles: default, local
+  cloud:
+    config:
+      enabled: false
+    loadbalancer:
+      ribbon:
+        enabled: false
+eureka:
+  client:
+    enabled: false
+    registerWithEureka: false
+    fetchRegistry: false

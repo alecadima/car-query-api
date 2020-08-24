@@ -1,0 +1,11 @@
+version: '3'
+services:
+  cassandra:
+    image: cassandra:3
+    ports:
+      - '9042:9042'
+#  rabbit-server:
+#    image: rabbitmq:3.8.3-management-alpine
+#    ports:
+#      - 5672:5672
+#      - 15672:15672

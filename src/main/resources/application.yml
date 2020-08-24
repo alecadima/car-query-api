@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: car-query-api
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    git:
+      mode: full
+
+wavefront:
+  application:
+    name: car-app
+    service: car-query-api
+
+car:
+  security:
+    enable: false
+  swagger:
+    title: "REST Car Query API Documentation"
+    description: "This is REST API documentation of the CAR Query API"
+    version: "1.0.0"
+    termsOfServiceUrl: "CAR Query API terms of service"
+    license: "Apache 2.0"
+    licenseUrl: "http://www.apache.org/licenses/LICENSE-2.0"
+    contact:
+      name: "Diego Pereira da Rocha"
+      url: "https://github.com/dprocha/car-api"
+      email: "ddarocha@vmware.com"
+
+---
+spring:
+  profiles: local
+  data:
+    cassandra:
+      contact-points: localhost
+      keyspace-name: "tanzu"
+      local-datacenter: datacenter1
+      port: 9042
+      schema-action: create_if_not_exists
